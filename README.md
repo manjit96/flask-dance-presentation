@@ -17,6 +17,8 @@ Migrate db's
 
 `flask db upgrade`
 
+Make sure `import sqlalchemy_utils` is in script.py.mako
+
 When watching the videos do note that some parts of code are missing from view.
 I recommend the following link that helps with understanding some lines of code and the necessary aspects: 
 https://flask-dance.readthedocs.io/en/v0.8.1/index.html
