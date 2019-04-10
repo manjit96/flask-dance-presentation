@@ -1,5 +1,4 @@
 __pycache__/
 venv/
 .idea/
-login.db
 migrations
