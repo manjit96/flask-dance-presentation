@@ -7,6 +7,16 @@ Please make sure to watch the following YouTube videos to help familiarize yours
 Part 1 Helps with Connecting to Github and Twitter: https://www.youtube.com/watch?v=MiHVTHzIgyE
 Part 2 Helps with Integrating Flask-Dance with SQL Alchemy: https://www.youtube.com/watch?v=G44Tpi58dcc&t=1167s
 
+Migrate db's
+
+`flask db init`
+
+`flask db stamp head`
+
+`flask db migrate -m "migrate messsage"`
+
+`flask db upgrade`
+
 When watching the videos do note that some parts of code are missing from view.
 I recommend the following link that helps with understanding some lines of code and the necessary aspects: 
 https://flask-dance.readthedocs.io/en/v0.8.1/index.html
