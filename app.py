@@ -2,6 +2,7 @@ from flask import Flask, redirect, url_for
 from flask_dance.contrib.twitter import make_twitter_blueprint, twitter
 from flask_dance.contrib.github import make_github_blueprint, github
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 from flask_login import UserMixin, current_user, LoginManager, login_required, login_user, logout_user
 from flask_dance.consumer.storage.sqla import OAuthConsumerMixin, SQLAlchemyStorage
 from flask_dance.consumer import oauth_authorized
@@ -9,7 +10,7 @@ from sqlalchemy.orm.exc import NoResultFound
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'thisissupposedtobeasecret'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////Users/merry/PycharmProjects/DancePresentation/login.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://///Users/merry/Documents/GitHub/DancePresentation/login.db'
 
 twitter_blueprint = make_twitter_blueprint(api_key='YYOWvShi57d2zKjPrlli9YeUp',
                                            api_secret='WalZDSnUDL49c9Wk8F8MwJ96cG4moKwpPDeT985F2PSneSdVYa')
@@ -22,6 +23,7 @@ app.register_blueprint(twitter_blueprint, url_prefix='/twitter_login')
 app.register_blueprint(github_blueprint, url_prefix='/github_login')
 
 db = SQLAlchemy(app)
+migrate = Migrate(app, db)
 login_manager = LoginManager(app)
 
 

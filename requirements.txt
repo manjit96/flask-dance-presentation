@@ -1,4 +1,5 @@
 aiohttp==1.0.5
+alembic==1.0.8
 async-timeout==3.0.1
 attrs==19.1.0
 blinker==1.4
@@ -9,14 +10,18 @@ discord.py==0.16.12
 Flask==1.0.2
 Flask-Dance==2.0.0
 Flask-Login==0.4.1
+Flask-Migrate==2.4.0
 Flask-SQLAlchemy==2.3.2
 idna==2.8
 idna-ssl==1.1.0
 itsdangerous==1.1.0
 Jinja2==2.10
+Mako==1.0.8
 MarkupSafe==1.1.1
 multidict==4.5.2
 oauthlib==3.0.1
+python-dateutil==2.8.0
+python-editor==1.0.4
 requests==2.21.0
 requests-oauthlib==1.2.0
 six==1.12.0
